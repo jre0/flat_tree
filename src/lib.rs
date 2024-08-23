@@ -100,7 +100,6 @@ impl Organization {
     }
 }
 
-// run with
 #[cfg(test)]
 mod test {
     use super::*;
@@ -109,6 +108,7 @@ mod test {
     /// I used a JSON formatter to make it clean for serde_json (deserialization into serde_json::Value)
     const SERIAL_DATA: &str = r#"{"Jane Mayer":["Baraka Tumuti","Sarah Lee","David Heinsburg"],"Baraka Tumuti":["Abida Begum"],"Sarah Lee":["David Gibbly","Kelsey Hamming"],"David Heinsburg":[],"Abida Begum":["Dave Bunt","James Ray"],"David Gibbly":[],"Kelsey Hamming":[],"Dave Bunt":[],"James Ray":[]}"#;
 
+    /// run with `cargo test -- --nocapture`
     #[test]
     fn import_json_and_flatten_to_name_list() -> Result<(), Error> {
         let org = Organization::import(SERIAL_DATA)?;
