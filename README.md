@@ -1,0 +1,2 @@
+# Organization Tree
+This is a rehash of the organization tree structure. The Organization structure follows the JS object pattern. Nodes do not own nodes in this case. A node is simply a string that is used to access another array of strings. The ```flat``` method uses the same logic as the ```Node``` struct. This rehash also includes an import statement to grab the data from JS Obj / JSON serial data. 
